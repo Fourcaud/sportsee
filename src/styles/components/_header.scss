@@ -1,0 +1,13 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  background: $color-2;
+  height: 91px;
+  .logo {
+    margin: auto 29px;
+    img {
+      width: 178px;
+      height: 60px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+
+  a {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+    color: $color-1;
+    font-size: 1.4em;
+  }
+  .active {
+    &::after {
+      content: "";
+      width: 85%;
+      height: 1px;
+      background: $color-1;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
