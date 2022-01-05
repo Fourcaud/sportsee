@@ -8,7 +8,10 @@ const Category = (props) => {
       </>
 
       <span className="dashboard__container__category__div">
-        <h3>{props.value}</h3>
+        <h3>
+          {props.value}
+          {props.unit}
+        </h3>
         <p>{props.name}</p>
       </span>
     </div>
