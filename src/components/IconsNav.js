@@ -1,9 +1,9 @@
 import React from "react";
 
-const IconsNav = (props) => {
+const IconsNav = ({ img, name }) => {
   return (
     <div className="iconNav">
-      <img src={props.img} alt={props.name}></img>
+      <img src={img} alt={name}></img>
     </div>
   );
 };

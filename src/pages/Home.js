@@ -1,33 +1,32 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+
 import Name from "../components/dashboard/Name";
 import Success from "../components/dashboard/Success";
 import Weight from "../components/dashboard/Weight";
 import Goal from "../components/dashboard/Goal";
-import Radar from "../components/dashboard/Radar";
+import RadarModule from "../components/dashboard/RadarModule";
 import Kpi from "../components/dashboard/Kpi";
 import Category from "../components/dashboard/Category";
+import { getUserInformation } from "../services/user";
 
 const Home = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/user/12")
-      .then((res) => setData(res.data.data));
+    getUserInformation().then((res) => setData(res.data.data));
   }, []);
 
-  return (
+  return data.userInfos ? (
     <div className="dashboard">
       <div className="dashboard__header">
-        <Name name={data.userInfos.firstName} />
+        <Name name={data?.userInfos?.firstName} />
         <Success data={data.todayScore} />
       </div>
       <div className="dashboard__container">
         <div className="dashboard__container__graph">
           <Weight />
           <Goal />
-          <Radar />
+          <RadarModule />
           <Kpi />
         </div>
         <div className="dashboard__container__category">
@@ -58,7 +57,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Home;
