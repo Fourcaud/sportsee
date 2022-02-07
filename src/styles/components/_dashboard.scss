@@ -25,7 +25,15 @@
       justify-content: center;
       flex-wrap: wrap;
       align-content: flex-start;
-      .cube {
+      .cubeGoal {
+        width: 258px;
+        height: 263px;
+        background: #ff0000;
+        margin: 20px;
+        border-radius: 5px;
+        color: white;
+      }
+      .cubeRadar {
         width: 258px;
         height: 263px;
         background: #282d30;
@@ -33,10 +41,17 @@
         border-radius: 5px;
         color: white;
       }
-      .weight {
-        width: 80%;
+      .cubeEmpty {
+        width: 258px;
+        height: 263px;
+        margin: 20px;
+        border-radius: 5px;
+        color: white;
+      }
+
+      .cubeDailyActivity {
+        width: 90%;
         height: 320px;
-        background: black;
       }
     }
     &__category {

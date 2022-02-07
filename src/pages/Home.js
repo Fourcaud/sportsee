@@ -2,54 +2,62 @@ import React, { useState, useEffect } from "react";
 
 import Name from "../components/dashboard/Name";
 import Success from "../components/dashboard/Success";
-import Weight from "../components/dashboard/Weight";
-import Goal from "../components/dashboard/Goal";
+
+import Goal from "../components/dashboard/Goal/Goal";
 import RadarModule from "../components/dashboard/RadarModule";
 import Kpi from "../components/dashboard/Kpi";
 import Category from "../components/dashboard/Category";
-import { getUserInformation } from "../services/user";
+import { getUserInformation } from "../services/useApi";
+import DailyActivity from "../components/dashboard/DailyActivity/DailyActivity";
 
 const Home = () => {
-  const [data, setData] = useState([]);
+  const [userInformation, setUserInformation] = useState([]);
 
   useEffect(() => {
-    getUserInformation().then((res) => setData(res.data.data));
+    getUserInformation()
+      .then((res) => {
+        if (res.status === 200) {
+          return setUserInformation(res.data.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, []);
-
-  return data.userInfos ? (
+  return userInformation.userInfos ? (
     <div className="dashboard">
       <div className="dashboard__header">
-        <Name name={data?.userInfos?.firstName} />
-        <Success data={data.todayScore} />
+        <Name name={userInformation?.userInfos?.firstName} />
+        <Success data={userInformation.todayScore} />
       </div>
       <div className="dashboard__container">
         <div className="dashboard__container__graph">
-          <Weight />
+          <DailyActivity />
           <Goal />
           <RadarModule />
           <Kpi />
         </div>
         <div className="dashboard__container__category">
           <Category
-            value={data.keyData.calorieCount}
+            value={userInformation.keyData.calorieCount}
             unit="kCal"
             name="Calories"
             img="../img/icons/calories.png"
           />
           <Category
-            value={data.keyData.proteinCount}
+            value={userInformation.keyData.proteinCount}
             unit="g"
             name="Proteines"
             img="../img/icons/proteines.png"
           />
           <Category
-            value={data.keyData.carbohydrateCount}
+            value={userInformation.keyData.carbohydrateCount}
             unit="g"
             name="Glucides"
             img="../img/icons/glucides.png"
           />
           <Category
-            value={data.keyData.lipidCount}
+            value={userInformation.keyData.lipidCount}
             unit="g"
             name="Lipides"
             img="../img/icons/lipides.png"
