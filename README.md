@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# SportSee
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Projet fictif de formation | OpenClassrooms
 
-## Available Scripts
+**Personnal Dashboard**
+<kbd>![dashboard](./SportSee.png)</kbd>
 
-In the project directory, you can run:
+> PROBLEMATIQUE
 
-### `npm start`
+Créer un tableau de bord analytique de performances sportives et indicateurs physiologiques
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+> BESOIN
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Afficher les données utlisateur sous forme de graphique
 
-### `npm test`
+## Compétences développées
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] Récupérer les données depuis l'API
+- [x] Manipuler / Corriger les données selon le besoin
+- [x] Repésenter graphiquement les données
+- [x] Développer des Routes imbriquées
+- [x] Gérer les différents cas liés à la réponse de la requête API
+- [x] Développer une logique de code partitionné dans des composants réutilisables
 
-### `npm run build`
+## Ressources fournies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Maquette](https://www.figma.com/file/BMomGVZqLZb811mDMShpLu/UI-design-Sportify-FR)
+- [Kanban](https://www.notion.so/Tableau-de-bord-SportSee-6686aa4b5f44417881a4884c9af5669e)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Bibliothèques
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    REACT
+    RECHART
+    AXIOS
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Editeur recommandé
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Visual Studio code](https://code.visualstudio.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prérequis
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [Git](https://git-scm.com/) pour cloner les repos
+- [nodeJS](https://nodejs.org/fr/) (version 14.18.1) pour exécuter les commandes
+- [npm](https://www.npmjs.com/) (version15.5.2) pour lancer l'application (front-end)
+- [Yarn](https://yarnpkg.com/) pour lancer l'API (back-end)
 
-## Learn More
+### Dépendances
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [Recharts](https://recharts.org/en-US/) (version 2.1.4)
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start) (version 5.3.0)
+- [Prop-types](https://www.npmjs.com/package/prop-types) (version 15.7.2)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Etape 1 : Lancement du back-end
 
-### Code Splitting
+- Cloner le repo du back-end : `git clone https://github.com/Fourcaud/sportsee.git`
+- Aller dans ce dossier : `cd backend`
+- Installer ses dépendances : `yarn`
+- Le lancer sur le port 3000 (par défaut) : `yarn dev`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Etape 2 : Lancement du front-end
 
-### Analyzing the Bundle Size
+- Cloner le repo du front-end : `git clone https://github.com/Fourcaud/sportsee.git`
+- Aller dans ce dossier : `cd frontend`
+- Installer ses dépendances : `npm install`
+- Le lancer sur le port 3001 : `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+URL de visualisation du rendu web : http://localhost:3001
+l'API de SportSee fournit des données pour les utilisateurs d'id 12 et 18
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Installation (_english version_)
 
-### Advanced Configuration
+### Recommanded IDE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- [Visual Studio code](https://code.visualstudio.com/)
 
-### Deployment
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [Git](https://git-scm.com/) to clone repositories
+- [nodeJS](https://nodejs.org/fr/) to run commands
+- [npm](https://www.npmjs.com/) to run application
+- [Yarn](https://yarnpkg.com/) to run back-end
 
-### `npm run build` fails to minify
+### Dependances
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Recharts](https://recharts.org/en-US/) (version 2.1.4)
+- [react-router-dom](https://reactrouter.com/web/guides/quick-start) (version 5.3.0)
+- [Prop-types](https://www.npmjs.com/package/prop-types) (version 15.7.2)
+
+### Step 1 : Installing and launching back-end
+
+- Clone the back-end repository : `git clone https://github.com/Fourcaud/sportsee.git`
+- Move to this folder : `cd backend`
+- Install dependencies: `npm install`
+- Launch back-end on port 3000 (default port): `npm run start`
+
+### Step 2 : Installing and launching front-end
+
+- Clone the front-end repository : `git clone https://github.com/Fourcaud/sportsee.git`
+- Move to this folder : `cd frontend`
+- Install dependencies : `npm install`
+- Launch front-end on port 3001: `npm start`
+
+```bash
+Front-end is now rendered at URL http://localhost:3001
+SportSee API only contains data for users with id 12 and 18
+```
