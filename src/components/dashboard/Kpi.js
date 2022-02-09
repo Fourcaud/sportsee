@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
 import { getUserInformation } from "../../services/useApi";
+import Loader from "../Loader";
 
 const Kpi = () => {
   const [userInformation, setUserInformation] = useState([]);
@@ -19,7 +20,7 @@ const Kpi = () => {
   }, []);
 
   if (userInformation.length === 0 || loading) {
-    return <div className="chart__scorePie"></div>;
+    return <Loader src="cubeEmpty" />;
   }
 
   let dailyScore = userInformation.score;

@@ -1,7 +1,6 @@
 import React from "react";
 import Logo from "./components/Logo";
 import Navigator from "./components/Navigator";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NavigatorVertical from "./components/NavigatorVertical";

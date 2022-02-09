@@ -1,0 +1,26 @@
+@-webkit-keyframes color-change-2x {
+  0% {
+    background: #282c343a;
+  }
+  100% {
+    background: #282c34a6;
+  }
+}
+@keyframes color-change-2x {
+  0% {
+    background: #282c3421;
+  }
+  100% {
+    background: #282c34a2;
+  }
+}
+
+.loader {
+  -webkit-animation: color-change-2x 1s linear infinite alternate both;
+  animation: color-change-2x 1s linear infinite alternate both;
+  border-radius: 5px;
+}
+.main {
+  height: 100%;
+  width: 100%;
+}

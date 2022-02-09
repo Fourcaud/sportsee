@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const IconsNav = ({ img, name }) => {
   return (
     <div className="iconNav">
@@ -9,3 +9,8 @@ const IconsNav = ({ img, name }) => {
 };
 
 export default IconsNav;
+
+IconsNav.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Logo = (props) => {
   return (
@@ -9,3 +10,7 @@ const Logo = (props) => {
 };
 
 export default Logo;
+
+Logo.propTypes = {
+  img: PropTypes.string.isRequired,
+};

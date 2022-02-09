@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const Category = (props) => {
   return (
     <div>
@@ -19,3 +19,11 @@ const Category = (props) => {
 };
 
 export default Category;
+
+Category.propTypes = {
+  img: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.number.isRequired,
+  unit: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};

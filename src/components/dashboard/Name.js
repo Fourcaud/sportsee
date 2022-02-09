@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 const Name = (props) => {
   return (
     <>
@@ -12,3 +12,7 @@ const Name = (props) => {
 };
 
 export default Name;
+
+Name.propTypes = {
+  name: PropTypes.string.isRequired,
+};
