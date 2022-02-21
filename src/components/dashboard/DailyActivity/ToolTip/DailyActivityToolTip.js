@@ -2,10 +2,10 @@ import React from "react";
 /**
  * [DailyActivityToolTip description]
  *
- * @param   {[type]}  payload  [payload description]
- * @param   {[type]}  active   [active description]
+ * @param   {[type]}  payload
+ * @param   {[type]}  active
  *
- * @return  {[type]}           [return description]
+ * @return  {[type]}           [return object]
  */
 const DailyActivityToolTip = ({ payload, active }) => {
   if (active && payload && payload.length) {

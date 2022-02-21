@@ -1,5 +1,12 @@
 import React from "react";
-
+/**
+ * [GoalToolTip description]
+ *
+ * @param   {[type]}  payload
+ * @param   {[type]}  active
+ *
+ * @return  {[type]}           [return object]
+ */
 const GoalToolTip = ({ payload, active }) => {
   if (active && payload && payload.length) {
     return (
