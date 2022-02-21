@@ -96,8 +96,8 @@ l'API de SportSee fournit des données pour les utilisateurs d'id 12 et 18
 
 - Clone the back-end repository : `git clone https://github.com/Fourcaud/sportsee.git`
 - Move to this folder : `cd backend`
-- Install dependencies: `npm install`
-- Launch back-end on port 3000 (default port): `npm run start`
+- Install dependencies: `yarn install`
+- Launch back-end on port 3000 (default port): `yarn dev`
 
 ### Step 2 : Installing and launching front-end
 
